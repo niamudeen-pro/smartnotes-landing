@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-400: #080808;
+  --primary-300: #0d0d0d;
+  --primary-200: #737373;
+  --primary-100: #e7e7e7;
+  --primary-50: #f7f7f7;
+
+  --secondary-300: #017373;
+  --secondary-200: #048c80;
+  --secondary-100: #aad9d1;
+
+  --accent: #efece6;
+
+  --gradient-bg: rgb(1, 115, 115);
+  --gradient: linear-gradient(
+    25deg,
+    rgba(1, 115, 115, 1) 0%,
+    rgba(170, 217, 209, 1) 100%
+  );
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--primary-400);
+}
+
+@layer base {
+  .container {
+    @apply mx-auto w-full !max-w-[1440px] px-4;
+  }
+  .page {
+    @apply mx-auto w-full max-w-[1440px] px-4;
+  }
+}
+
+@layer utilities {
+  .responsive_width {
+    @apply mx-auto px-5 md:px-12 xl:px-24;
+  }
+  .flex_center {
+    @apply flex items-center justify-center;
+  }
+  .flex_between {
+    @apply flex items-center justify-between;
+  }
+  .text-large {
+    @apply m-0 font-["Be_Vietnam_Pro"] text-[20px] leading-[150%];
+  }
+
+  .text-reg {
+    @apply m-0 font-["DM_Sans"] text-[16px] leading-[150%];
+  }
+
+  .text-med {
+    @apply m-0 font-["DM_Sans"] text-[18px] leading-[150%];
+  }
+
+  .text-small {
+    @apply m-0 font-["DM_Sans"] text-[14px] leading-[140%];
+  }
+
+  .text-tiny {
+    @apply m-0 font-["DM_Sans"] text-[12px] leading-[150%];
+  }
+
+  h1 {
+    @apply m-0 font-["DM_Sans"] text-[56px] leading-[106%] tracking-[-3px];
+  }
+
+  h2 {
+    @apply m-0 font-["DM_Sans"] text-[48px];
+  }
+
+  h3 {
+    /* font-family: "Be Vietnam Pro"; */
+    @apply m-0 text-[40px] font-bold leading-[120%] tracking-[-0.64px];
+  }
+
+  h5 {
+    @apply m-0 font-["DM_Sans"] text-[24px] font-bold leading-[140%] tracking-[-0.64px];
+  }
+}
+
+.text_base_gradient {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.features__overlay_gradient {
+  background: center no-repeat
+    url("./assets/features/radial-gradient-features.png");
+  width: 320px;
+  height: 350px;
+  position: absolute;
+  top: 45%;
+  left: 32%;
+}
+
+.accordion_item__answer {
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+  background-color: var(--accent);
+  border: 1px solid var(--secondary-200);
+  border-radius: 16px;
+  transition:
+    max-height 0.4s ease-in-out,
+    visibility 0.2s ease-in-out,
+    opacity 0.2s ease-in-out,
+    margin 0.4s ease-in-out;
+}
+.accordion_item__answer.visible {
+  max-height: 200px;
+  visibility: visible;
+  margin-top: 20px;
+  opacity: 1;
+}
