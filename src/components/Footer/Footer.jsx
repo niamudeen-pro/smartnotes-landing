@@ -11,7 +11,10 @@ export default function Footer() {
   const socialIcons = [facebookIcon, linkedinIcon, twitterIcon, youtubeIcon];
 
   return (
-    <footer className="w-full border-t border-[rgba(4,140,128,0.5)]">
+    <footer
+      className="w-full border-t border-[rgba(4,140,128,0.5)]"
+      id="support"
+    >
       {/* Top Section */}
       <div className="container flex flex-col gap-16 py-16 sm:px-16 xl:flex-row xl:justify-between">
         {/* Left Side (Logo + Input) */}

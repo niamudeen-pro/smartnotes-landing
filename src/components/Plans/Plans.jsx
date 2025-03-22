@@ -6,7 +6,7 @@ import clsx from "clsx"; // Import clsx for better class management
 export default function Plans() {
   const [isYearly, setIsYearly] = useState(true);
   return (
-    <section className="flex flex-col items-center py-24">
+    <section className="flex flex-col items-center py-24" id="pricing">
       {/* Header Section */}
       <div className="text-center">
         <h3 className="mb-4 text-[30px] font-bold text-secondary-200 sm:text-5xl">

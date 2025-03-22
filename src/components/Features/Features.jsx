@@ -15,7 +15,10 @@ const FeatureCard = ({ heading, description, icon }) => (
 
 export default function Features() {
   return (
-    <section className="relative mx-auto max-w-[1180px] flex-col px-4 py-[70px] text-primary-100">
+    <section
+      className="relative mx-auto max-w-[1180px] flex-col px-4 py-[70px] text-primary-100"
+      id="features"
+    >
       <div className="mb-20 text-center">
         <h2 className="mb-4 text-[30px] font-bold sm:text-5xl">
           Discover the Power of{" "}

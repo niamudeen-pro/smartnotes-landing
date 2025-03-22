@@ -6,10 +6,10 @@ import closeIcon from "../../assets/svg/close.svg";
 import Button from "../Shared/Button/Button";
 import { SOCIAL_LINKS } from "../../utils/constants";
 
-const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Support", href: "#support" },
+const NAVIGATION_LINKS = [
+  { label: "Features", url: "#features" },
+  { label: "Pricing", url: "#pricing" },
+  { label: "Support", url: "#support" },
 ];
 
 export default function Navbar() {
@@ -31,9 +31,9 @@ export default function Navbar() {
               isOpen ? "flex" : "hidden"
             }`}
           >
-            {navLinks.map(({ label, href }) => (
+            {NAVIGATION_LINKS.map(({ label, url }) => (
               <li key={label}>
-                <a href={href} className="hover:text-secondary-200">
+                <a href={url} className="hover:text-secondary-200">
                   {label}
                 </a>
               </li>
