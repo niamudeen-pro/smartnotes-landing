@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "./Navigation/Navbar";
 import Hero from "./Hero/Hero";
 import AnimatedLogos from "./Logos/AnimatedLogos";
-import Features from "./features/Features";
-import Footer from "./footer/Footer";
+import Features from "./Features/Features";
+import Footer from "./Footer/Footer";
 import Faq from "./FAQ/Faq";
 import Plans from "./Plans/Plans";
 import Video from "./Video/Video";
@@ -20,26 +20,16 @@ export default function AppLayout() {
           <AnimatedLogos />
         </div>
         <Testimonial />
-        <section>
-          <Features />
-        </section>
+        <Features />
         <Testimonial />
-        <section>
-          <Video />
-        </section>
+        <Video />
         <Testimonial />
-        <section>
-          <Plans />
-        </section>
+        <Plans />
         <Testimonial />
-        <section>
-          <Faq />
-        </section>
+        <Faq />
         <Testimonial />
         <CTA />
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </main>
     </div>
   );

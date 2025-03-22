@@ -6,7 +6,7 @@ import clsx from "clsx"; // Import clsx for better class management
 export default function Plans() {
   const [isYearly, setIsYearly] = useState(true);
   return (
-    <div className="flex flex-col items-center py-24">
+    <section className="flex flex-col items-center py-24">
       {/* Header Section */}
       <div className="text-center">
         <h3 className="mb-4 text-[30px] font-bold text-secondary-200 sm:text-5xl">
@@ -121,6 +121,6 @@ export default function Plans() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

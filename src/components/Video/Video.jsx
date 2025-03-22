@@ -6,7 +6,7 @@ import playIconImg from "../../assets/play-button.png";
 
 export default function Video() {
   return (
-    <div className="flex_center overflow-hidden py-16">
+    <section className="flex_center overflow-hidden py-16">
       <div className="flex_center relative">
         <img src={videoImg} alt="" className="" />
 
@@ -22,6 +22,6 @@ export default function Video() {
         {/* Overlay */}
         <div className="absolute inset-0 rounded-[20px] bg-secondary-200 opacity-50"></div>
       </div>
-    </div>
+    </section>
   );
 }
