@@ -32,7 +32,7 @@ export default function Navbar() {
             }`}
           >
             {NAVIGATION_LINKS.map(({ label, url }) => (
-              <li key={label}>
+              <li key={label} onClick={() => setIsOpen(false)}>
                 <a href={url} className="hover:text-secondary-200">
                   {label}
                 </a>

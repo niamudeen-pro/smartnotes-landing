@@ -33,7 +33,10 @@ export default function AccordionItem({
             : "invisible max-h-0 opacity-0"
         }`}
       >
-        <div className="space-y-4 rounded-xl border border-secondary-200 bg-accent px-6 py-4 text-left text-black">
+        <div
+          data-lenis-prevent
+          className="max-h-48 space-y-4 overflow-auto rounded-xl border border-secondary-200 bg-accent px-6 py-4 text-left text-black"
+        >
           <div className="flex justify-between">
             <p className="text-med">{item.answerHeading}</p>
             <img

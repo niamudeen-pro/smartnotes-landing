@@ -8,8 +8,6 @@ import arrowIcon from "../../assets/svg/colored-arrow.svg";
 import { FOOTER_LINKS } from "../../utils/constants";
 
 export default function Footer() {
-  const socialIcons = [facebookIcon, linkedinIcon, twitterIcon, youtubeIcon];
-
   return (
     <footer
       className="w-full border-t border-[rgba(4,140,128,0.5)]"
@@ -79,14 +77,16 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4">
-            {socialIcons.map((icon, index) => (
-              <button
-                key={index}
-                className="hover:bg-secondary-400 flex h-8 w-8 items-center justify-center rounded-full bg-secondary-300 transition"
-              >
-                <img src={icon} alt="social icon" />
-              </button>
-            ))}
+            {[facebookIcon, linkedinIcon, twitterIcon, youtubeIcon].map(
+              (icon, index) => (
+                <button
+                  key={index}
+                  className="hover:bg-secondary-400 flex h-8 w-8 items-center justify-center rounded-full bg-secondary-300 transition"
+                >
+                  <img src={icon} alt="social icon" />
+                </button>
+              ),
+            )}
           </div>
         </div>
       </div>
